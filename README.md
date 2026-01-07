@@ -171,39 +171,7 @@ The file contains predictions for all test properties in the format required for
    - Ensemble or stacked model approach
    - Log-transformed target (prices)
 
-## 🎯 Results
 
-| Model | RMSE (Validation) | R² Score | Notes |
-|-------|-------------------|----------|-------|
-| Tabular Only | 101,496 | 0.888 | Baseline |
-| Tabular + Satellite Images | 101,420 | 0.888 | +0.1% improvement |
-
-## 🛠️ Technical Highlights
-
-- ✅ **Parallel Downloads**: 16 workers for fast image acquisition
-- ✅ **Robust Preprocessing**: Zero-fill for missing images/features
-- ✅ **Log-Price Training**: `np.log1p()` → `np.expm1()` for better distribution
-- ✅ **Reproducible**: All random seeds fixed
-- ✅ **Production Ready**: Complete pipeline from raw data to submission
-
-## 📝 Notes
-
-- The model uses log-transformed prices during training for better performance
-- Missing satellite images are handled gracefully with zero-filled features
-- All preprocessing steps are saved for consistent test-time transformation
-- Random seeds are fixed for reproducibility
-
-## 🤝 Contributing
-
-Feel free to open issues or submit pull requests for improvements.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 📧 Contact
-
-For questions or feedback, please open an issue on GitHub.
 
 ---
 
